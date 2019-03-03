@@ -1,0 +1,109 @@
+
+<!doctype html>
+<html ng-app="joho" ng-controller="JOHOCtrl">
+
+<head>
+<!-- MWD -->
+    <meta charset="utf-8">
+    <title>J. Hornig - JOHO's | Follow the journey of the JOHO's bean</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="title" content="J. Hornig - JOHO's">
+    <meta name="author" content="J. Hornig GmbH">
+    <meta name="robots" content="all">
+
+    <meta name="keywords" content="coffee,brazil,hornig,j. hornig, johos, minas gerais, ismael andrades, yellow icatu, icatuai, johannes hornig, journey, marion luttenberger, graz, sao paulo, roasting, beans, harvest, processing, shipping, spezial">
+    <meta name="description" content="Follow the journey of the JOHO's bean through the depths of the Brazilian fazendas. Travel through Minas Gerais, Brazils biggest coffee region.">
+    <meta name="abstract" content="Follow the journey of the JOHO's bean through the depths of the Brazilian fazendas. Travel through Minas Gerais, Brazils biggest coffee region.">
+    <meta http-equiv="content-language" content="de">
+    <meta http-equiv="content-type" content="text/html; charset=iso-8859-1">
+    <meta name="revisit-after" content="30 days">
+    <meta name="revisit" content="after 30 days">
+    <meta name="DC.Language" content="de">
+    <meta property="og:title" content="J. Hornig - JOHO's">
+    <meta property="og:type" content="drink">
+    <meta property="og:url" content="http://www.johos.at/">
+    <meta property="og:image" content="http://www.johos.at/assets/share/shareimage-fb.jpg">
+    <meta property="og:site_name" content="J. Hornig - JOHO's">
+    <meta property="og:description" content="JOHO's - Direct trade speciality coffee by J. Hornig. Sourced from coffee fazendas in Brazil, Guatemala and Ethiopia.">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon-57x57-precomposed.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+    <link rel="stylesheet" href="styles/vendor-81f6e51b.css">
+    <link rel="stylesheet" href="styles/app-95f5ebc7.css">
+    <script src="Chanllenge.js"></script>
+    <script>
+        try {
+            Typekit.load();
+        } catch (e) {}
+    </script>
+</head>
+
+<body>
+    <a class="browsehappy" href="http://www.browsehappy.com" target="_blank"></a>
+    <div class="microsite-content">
+        <ng-include src="'/app/views/preloader.html'" ng-if="!hasLoaded&&isDetectionReady"></ng-include>
+        <div class="frame"><span class="top"></span> <span class="right"></span> <span class="bottom"></span> <span class="left"></span>
+        </div>
+        <div class="joho-video-player fullscreen"></div>
+        <div class="ui bottom-left">
+            <joho-audio-switch class="audio-switch" ng-if="browserMode=='desktop'">
+                <div class="copy" ng-click="toggleSound()"><span class="light">{{copy.UI_SOUND}}</span> <b>{{soundState}}</b>
+                </div>
+            </joho-audio-switch>
+            <joho-language-switch class="language-switch"><span class="light">language</span>
+                <div class="select-language">
+                    <div class="lang" ng-repeat="lang in languages" ng-class="lang.active?'active':'light'" ng-click="setLanguage($index)">{{lang.name}}</div>
+                </div>
+            </joho-language-switch>
+        </div>
+        <div class="ui bottom-right">
+            <div class="page-switch"><span class="prev-page" ng-click="prevPage()"><img src="assets/ui/arrow_prev_page.svg" alt=""></span> <span class="next-page" ng-click="nextPage()"><img src="assets/ui/arrow_next_page.svg" alt=""></span>
+            </div>
+        </div>
+        <div ng-view="" class="joho-main-container"></div>
+        <div class="explore-favelas" joho-bonus-button="">
+            <svg class="bonus-background" viewbox="0 0 1 1" preserveaspectratio="none">
+                <polygon points=".1 1, 1 1, 1 0"></polygon>
+            </svg>
+            <a ng-click="nextPage()" class="clickable-overlay"></a>
+            <div class="bonus-copy">
+                <div class="copy-container"><span>{{copy.C6_BONUS_FAVELAS}}</span>
+                    <br>
+                    <h1>{{copy.C6_FAVELAS}}</h1>
+                </div>
+            </div>
+        </div>
+        <ng-include src="'app/views/side-nav-buy.html'"></ng-include>
+    </div>
+    <script>
+        var JOHO = {};
+
+        var _settings = {
+            "LANG": "en"
+        };
+    </script>
+    <script src="scripts/vendor-acee2bb3.js"></script>
+    <script src="scripts/app-553fd968.js"></script>
+    <script>
+        (function(b, o, i, l, e, r) {
+            b.GoogleAnalyticsObject = l;
+            b[l] || (b[l] =
+                function() {
+                    (b[l].q = b[l].q || []).push(arguments)
+                });
+            b[l].l = +new Date;
+            e = o.createElement(i);
+            r = o.getElementsByTagName(i)[0];
+            e.src = '//www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e, r)
+        }(window, document, 'script', 'ga'));
+        ga('create', 'UA-49857949-2');
+        ga('send', 'pageview');
+    </script>
+</body>
+
+</html>

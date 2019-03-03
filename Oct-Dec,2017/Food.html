@@ -1,0 +1,107 @@
+<!--
+   Chinese City
+-->
+ 
+<html> 
+<head>
+	<title>Chengdu</title>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<meta name="generator" content="Geany 1.31" />
+	<link type="text/css" rel="stylesheet" href="CSS/NewCSS.css"> 
+	<link rel="icon" type="image/png" href="Images/food.png" sizes="32x32">
+</head>
+<body id="b04">
+	 <div id="nav"><center> 
+		 <ul><center>
+			 <li><a href="Chinese City.html" >City</a>
+				<ul>
+					<li><sub onclick="Food()">Food</sub></li>
+				</ul>
+			 </li>
+			 <li class="show"><a href="Chinese Costume.html">Costume</a></li>
+			 <li class="show"><a href="Chinese Architecture.html">Architecture</a>
+			 </li></center>
+			  <div class="clear"></div>
+		  </ul> 
+	 </div>
+	<div>
+	<table id="t01">
+		<tr>
+			<th class="ROW1-1"><img src="Images/liang1.jpg" width="100%"></a></th>
+			<th class="ROW1-2"><img src="Images/dan2.jpg" width="100%" height="118%"></a></th>
+			<th class="ROW1-3"><img src="Images/chuan1.jpg" width="100%" height="118%"></a></th>
+		</tr>
+		<tr>
+			<td class="C1">Liang Gao</th>
+			<td class="C1">Dan Hong Gao</th>
+			<td class="C1">Ma La Tang</th>
+		</tr>
+		<tr>
+			<th class="C1"><center><textarea readonly class="textarea" cols="30" rows="7" id="text1" >One of the favorite snacks for civilians who eat them at Lunar New Year holidays. Liang Gao is one of the rice cakes. It's cool and sweet.That's the dessert for summer.</textarea></th></center>
+			<th class="C1"><center><textarea readonly class="textarea" cols="31" rows="7" id="text2" >Dan Hong Gao is not sold in restaurants or shops.	Normally, there will be more than 15 choices of stuffing for customers to choose like sugar, cream, spicy sauce, minced meat and sesame.</textarea></td></center>
+			<th class="C1"><center><textarea readonly class="textarea" cols="30" rows="7" id="text3" >This is a kind of spicy hot snack in Sichuan province, somewhat like hot pot. Sliced raw meat, vegetables, sausages, shrimps, in fact almost anything edible is impaled on a bamboo skewer and dipped into a pan of boiling hot spicy soup.</textarea></td></center>
+		</tr> 
+		<tr>
+			<td class="C1">
+						   <button id="cur" onclick="Yellow1()">YELLOW</button>&nbsp;&nbsp;&nbsp;&nbsp;
+						   <input id="cur" type=button value="Copy!" onclick="Copy1('#text1')"></td>
+			<td class="C1"> 
+							<button id="cur" onclick="Yellow2()">YELLOW</button>&nbsp;&nbsp;&nbsp;&nbsp;
+							<input id="cur" type=button value="Copy!" onclick="Copy2('#text2')"></td>
+			<td class="C1"> 
+							<button id="cur" onclick="Yellow3()">YELLOW</button>&nbsp;&nbsp;&nbsp;&nbsp;
+							<input id="cur" type=button value="Copy!" onclick="Copy3('#text3')"></td>
+		</tr>
+		
+	</table>
+  </div>
+  <figure class="shape square1">Body</figure>
+	  <figure class="square2">Leg R</figure>
+	  <figure class="square3">Leg L</figure>
+	  <figure class="circle1">Hand L</figure>
+	  <figure class="circle3">Hand R</figure>
+	  <figure class="shape circle2">Face</figure>
+	  <figure class="triangle1">Hat</figure> 
+<script>
+function Yellow1() {
+    document.getElementById("text1").style.color = "yellow"; 
+}
+function Yellow2() {
+	document.getElementById("text2").style.color = "yellow"; 
+} 
+function Yellow3() {
+	document.getElementById("text3").style.color = "yellow"; 
+}
+function Copy1() {
+        var e=document.getElementById("text1"); 
+        e.select(); 
+        document.execCommand("Copy"); 
+       alert("It has been copied.  You can paste it now."); 
+}
+function Copy2() {
+        var e=document.getElementById("text2"); 
+        e.select(); 
+        document.execCommand("Copy"); 
+       alert("It has been copied.  You can paste it now."); 
+}function Copy3() {
+        var e=document.getElementById("text3"); 
+        e.select(); 
+        document.execCommand("Copy"); 
+       alert("It has been copied.  You can paste it now."); 
+}
+function menu(){ 
+	var Name = document.getElementById("nav").getElementsByTagName("li");
+	for(var i=0;i<Name.length;i++){
+		Name[i].onmouseover=function(){
+			this.className +="show"; 
+			}
+		Name[i].onmouseout=function(){
+			this.className =this.className.replace("show","");
+			}
+		}
+	}
+	window.onload= menu;
+	
+</script>
+</body>
+</html>

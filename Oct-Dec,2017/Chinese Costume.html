@@ -1,0 +1,88 @@
+<!--
+   Chinese Costume
+--> 
+<head>
+	<title>Chinese Costume</title>
+	<link type="text/css" rel="stylesheet" href="CSS/NewCSS.css"> 
+	<link href="https://fonts.googleapis.com/css?family=Modak" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Changa|Special+Elite" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Crimson+Text:400,700i" rel="stylesheet">
+	<link rel="icon" type="image/png" href="Images/costume.png" sizes="32x32">
+</head>
+
+<body id="b02">
+	<div id="nav"><center> 
+		 <ul><center>
+			 <li class="show"><a href="Chinese City.html" >City</a></li>
+			 <li><a href="Chinese Costume.html">Costume</a>
+				<ul>
+					<li><sub onclick="Hanfu()" >Hanfu</sub></li>
+					<li><sub onclick="Qipao()" >Qipao</sub></li>
+					<li><sub onclick="MHanfu()" >Modern Hanfu</sub></li>
+				</ul>
+			 </li>
+			 <li class="show"><a href="Chinese Architecture.html">Architecture</a></li></center>
+			  <div class="clear"></div>
+		  </ul> 
+	 </div>
+<div>  
+	<input type="text" class="textbox" id="choice" onkeyup="myfunction()" placeholder="Know more about..."></button>
+	<table id="t02">
+		<tr>
+			<td id="t03"></td> 
+			<td id="t04"></td>
+		</tr>
+		<tr>
+			<td id="t05"></td> 
+			<td id="t06"></td>
+		</tr>   
+	</table>
+</div>
+<script>
+function Qipao(){
+	document.getElementById("t03").style.backgroundImage = "url('Images/qipao11.jpg')";
+	document.getElementById("t04").style.backgroundImage = "url('Images/qipao2.jpg')";
+	document.getElementById("t05").style.backgroundImage = "url('Images/qipao3.jpg')";
+	document.getElementById("t06").style.backgroundImage = "url('Images/qipao4.jpg')";
+}
+function Hanfu(){
+	document.getElementById("t03").style.backgroundImage = "url('Images/hanfu2.jpg')";
+	document.getElementById("t04").style.backgroundImage = "url('Images/hanfu5.jpg')";
+	document.getElementById("t05").style.backgroundImage = "url('Images/hanfu3.jpg')";
+	document.getElementById("t06").style.backgroundImage = "url('Images/hanfu6.jpg')";
+}
+function MHanfu(){
+	document.getElementById("t03").style.backgroundImage = "url('Images/han10.jpg')";
+	document.getElementById("t04").style.backgroundImage = "url('Images/han8.jpg')";
+	document.getElementById("t05").style.backgroundImage = "url('Images/han9.jpg')";
+	document.getElementById("t06").style.backgroundImage = "url('Images/han5.jpeg')";
+}
+function myfunction() {
+    var x = document.getElementById("choice");
+    if(x.value==1)
+		alert("        Hanfu\n  A whole set of the Han Chinese Garment has three layers: an underwear, an inner garment and an overcoat. The three layers embrace ten elements: collar, hem, sleeve, lapel, belt and so on. And accessories such as socks, shawl and jade belt are used on the Hanfu.\n        In recent years, there has been a revival of traditional Chinese attires. Some young people engaged in promoting Hanfu through the Internet social networking. On traditional Chinese festivals such as Tomb Sweeping Day and Mid-autumn Festival and formal occasions, the younger people put on their Hanfu. Once, on top of Xian City Wall, more than one hundred couples got married in a ceremony according to ancient edicts wearing Han Chinese garb.");
+	else if(x.value==2)
+		alert("        Qipao\n  Most of them were made of silk, and embroidered, with thick laces trimmed at the collar, sleeves and edges. The dress empresses of past dynasties wore them. Their style of dress was noted as the highest of standards for Chinese womenfor several thousand years.\n          Like many fashions, the beauty of Qipao stands away from others.\n          Stunning is one of its features from the collar, loop, chest, waist and hips to the lower hem. Qipao completely shows off a woman's figure. Not only does it lay stress on the natural beauty of a female figure, but also makes women's legs appear more slender.");
+	else if(x.value==3)
+		alert("        Modern Hanfu\n  Combining both Hanfu and modern elements.");
+	else
+		alert("Wrong message!");
+}
+function menu(){ 
+	var Name = document.getElementById("nav").getElementsByTagName("li");
+	for(var i=0;i<Name.length;i++){
+		Name[i].onmouseover=function(){
+			this.className +="show"; 
+			}
+		Name[i].onmouseout=function(){
+			this.className =this.className.replace("show","");
+			}
+		}
+	}
+	window.onload= menu;
+</script>
+</body>
+
+</html>

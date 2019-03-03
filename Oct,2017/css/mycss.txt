@@ -1,0 +1,32 @@
+<style>
+#thumbwrap {
+    position:relative;
+	width:25%;
+	height:25%;
+	}
+
+.thumb span {
+    position:fixed;
+	visibility:hidden;
+	}
+
+.thumb img {
+    border:5px solid #000;
+	margin:10xp;
+	float:left;
+	width:13%;
+	margin-right: 1%;
+	margin-bottom: 0.5em;
+	}
+
+	
+.thumb:hover span {
+    visibility:visible;
+	top:35%;
+	left:28%;
+	z-index:1;
+	width:200%;
+	height:200%;
+	}
+</style>
+	

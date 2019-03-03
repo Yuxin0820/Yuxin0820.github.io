@@ -1,0 +1,150 @@
+<!--
+   Chinese Architecture
+-->
+<html>
+  <head>
+    <title>Chinese Architecture</title>
+    <link type="text/css" rel="stylesheet" href="css/NewCSS.css">
+    <link href="https://fonts.googleapis.com/css?family=Modak" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Rajdhani" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Changa|Special+Elite" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Handlee|Righteous" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+    <link rel="icon" type="image/png" href="Images/arch.png" sizes="32x32">
+  </head>
+
+  <body id="b03"> 
+	  <div id="nav"><center> 
+		 <ul><center>
+			 <li class="show"><a href="Chinese City.html" >City</a></li>
+			 <li class="show"><a href="Chinese Costume.html">Costume</a></li>
+			 <li><a href="Chinese Architecture.html">Architecture</a>
+				 <ul>
+					<li><sub  onclick="ChangePicFC()" >Forbidden City</sub></li>
+					<li><sub  onclick="ChangePicJT()" >Jiangnan Town</sub></li>
+					<li><sub  onclick="ChangePicFT()" >Fujian Tulou</sub></li>
+				 </ul>
+			 </li></center>
+			  <div class="clear"></div>
+		  </ul> 
+	 </div>
+	 <button class="buttonl" onclick="Changel()"></button>
+	 <button class="buttonr" onclick="Changer()"></button>	 
+	 <div Class="text">
+		 <P id="tittle">Forbidden City</P>
+		 <p id="text">The Forbidden City was the Chinese imperial palace from the Ming dynasty to the end of the Qing dynasty-the years 1420 to 1912.</p>
+	 </div>
+<script> 
+	var curIndex=0;  
+	var album=new Array(); 
+	album[0]="snow4.jpg"; 
+	album[1]="snow1.jpg";  
+	album[2]="bu12.jpg"; 
+	album[3]="jiang3.jpeg"; 
+	album[4]="jiang2.jpg";    
+	album[5]="tu1.jpeg";
+	album[6]="tu2.jpg";
+	album[7]="tu3.jpg";
+function Changel(){   
+	var bgid=document.getElementById("b03");
+	if(curIndex==0){
+		curIndex=7;
+	}
+	else{
+		curIndex--;
+	}
+	bgid.style.backgroundImage="url('Images/"+album[curIndex]+"')";
+	if(curIndex>=0&&curIndex<=2){
+		document.getElementById("tittle").innerHTML="Forbidden City"; 
+		document.getElementById("text").innerHTML="The Forbidden City was the Chinese imperial palace \nfrom he Ming dynasty to the end of \nthe Qing dynasty-the years 1420 to 1912.";
+	}
+	else if(curIndex==3){
+		document.getElementById("tittle").innerHTML="Jiangnan Town"; 
+		document.getElementById("text").innerHTML="Jiangnan is a geographic area in China referring to lands immediately to the south of the lower reaches of the Yangtze River, including the southern part of the Yangtze Delta.";
+		}
+	else if(curIndex==4){
+		document.getElementById("tittle").innerHTML="Jiangnan Town"; 
+		document.getElementById("text").innerHTML="The word Jiangnan is based on the Chinese name for the Yangtze, Chang Jiang, and nan meaning 'south'.";
+		}
+	else if(curIndex==5){
+		document.getElementById("tittle").innerHTML="Fujian Tulou"; 
+		document.getElementById("text").innerHTML="The Fujian Tulou are Chinese rural dwellings[1] unique to the Hakka in the mountainous areas in southeastern Fujian, China.";
+		}  
+	else if(curIndex==6){
+		document.getElementById("tittle").innerHTML="Fujian Tulou"; 
+		document.getElementById("text").innerHTML="The fortified outer structures are formed by compacting earth, mixed with stone, bamboo, wood and other readily available materials, to form walls up to 6 feet (1.8 m) thick.";
+	}
+	else if(curIndex==7){
+		document.getElementById("tittle").innerHTML="Fujian Tulou"; 
+		document.getElementById("text").innerHTML="A total of 46 Fujian tulou sites were inscribed in 2008 by UNESCO as World Heritage Site, as 'exceptional examples of a building tradition and function exemplifying a particular type of communal living and defensive organization [in a] harmonious relationship with their environment'.";
+	}
+}
+function Changer(){ 
+	var bgid=document.getElementById("b03");
+	if(curIndex==7){
+		curIndex=0;
+	}
+	else{
+		curIndex++;
+	}
+	bgid.style.backgroundImage="url('Images/"+album[curIndex]+"')"; 
+	if(curIndex>=0&&curIndex<=2){
+		document.getElementById("tittle").innerHTML="Forbidden City";
+		document.getElementById("text").innerHTML="The Forbidden City was the Chinese imperial palace from the Ming dynasty to the end of the Qing dynasty-the years 1420 to 1912.";
+	}
+	else if(curIndex==3){
+		document.getElementById("tittle").innerHTML="Jiangnan Town"; 
+		document.getElementById("text").innerHTML="Jiangnan is a geographic area in China referring to lands immediately to the south of the lower reaches of the Yangtze River, including the southern part of the Yangtze Delta.";
+		}
+	else if(curIndex==4){
+		document.getElementById("tittle").innerHTML="Jiangnan Town"; 
+		document.getElementById("text").innerHTML="The word Jiangnan is based on the Chinese name for the Yangtze, Chang Jiang, and nan meaning 'south'.";
+		}
+	else if(curIndex==5){
+		document.getElementById("tittle").innerHTML="Fujian Tulou"; 
+		document.getElementById("text").innerHTML="The Fujian Tulou are Chinese rural dwellings[1] unique to the Hakka in the mountainous areas in southeastern Fujian, China.";
+		}  
+	else if(curIndex==6){
+		document.getElementById("tittle").innerHTML="Fujian Tulou"; 
+		document.getElementById("text").innerHTML="The fortified outer structures are formed by compacting earth, mixed with stone, bamboo, wood and other readily available materials, to form walls up to 6 feet (1.8 m) thick.";
+	}
+	else if(curIndex==7){
+		document.getElementById("tittle").innerHTML="Fujian Tulou"; 
+		document.getElementById("text").innerHTML="A total of 46 Fujian tulou sites were inscribed in 2008 by UNESCO as World Heritage Site, as 'exceptional examples of a building tradition and function exemplifying a particular type of communal living and defensive organization [in a] harmonious relationship with their environment'.";
+	}
+}  
+function ChangePicFC(){ 
+	document.getElementById("tittle").innerHTML="Forbidden City"; 
+	document.getElementById("text").innerHTML="The Forbidden City was the Chinese imperial palace from the Ming dynasty to the end of the Qing dynasty-the years 1420 to 1912.";
+	curIndex=0;
+	document.getElementById("b03").style.backgroundImage="url('Images/"+album[curIndex]+"')"; 
+}
+function ChangePicJT(){ 
+	document.getElementById("tittle").innerHTML="Jiangnan Town"; 
+	document.getElementById("text").innerHTML="Jiangnan is a geographic area in China referring to lands immediately to the south of the lower reaches of the Yangtze River, including the southern part of the Yangtze Delta.";
+	curIndex=3;
+	document.getElementById("b03").style.backgroundImage="url('Images/"+album[curIndex]+"')"; 
+}
+function ChangePicFT(){ 
+	document.getElementById("tittle").innerHTML="Fujian Tulou";  
+	document.getElementById("text").innerHTML="The Fujian Tulou are Chinese rural dwellings[1] unique to the Hakka in the mountainous areas in southeastern Fujian, China.";
+	curIndex=5;
+	document.getElementById("b03").style.backgroundImage="url('Images/"+album[curIndex]+"')"; 
+}
+function menu(){ 
+	var Name = document.getElementById("nav").getElementsByTagName("li");
+	for(var i=0;i<Name.length;i++){
+		Name[i].onmouseover=function(){
+			this.className +="show"; 
+			}
+		Name[i].onmouseout=function(){
+			this.className =this.className.replace("show","");
+			}
+		}
+	}
+	window.onload= menu;
+</script> 
+
+  </body>
+</html>
