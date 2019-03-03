@@ -162,10 +162,10 @@ else{
 			$sql = "SELECT id,image,name,price FROM product ORDER BY RAND() LIMIT 8";
 		}
     
-        $dbhost = "localhost";
-		$dbuser = "root";
-		$dbpass = "";
-		$dbname = "final";
+      $dbhost = "localhost";
+  $dbuser = "id6942946_yuxin";
+  $dbpass = "082000";
+  $dbname = "id6942946_yuxin_db";
     	$conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
     	$result = mysqli_query($conn, $sql);
     

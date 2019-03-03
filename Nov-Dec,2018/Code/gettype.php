@@ -7,9 +7,9 @@
  */
 	session_start();
 	$dbhost = "localhost";
-		$dbuser = "root";
-		$dbpass = "";
-		$dbname = "final";
+	$dbuser = "id6942946_yuxin";
+	$dbpass = "082000";
+	$dbname = "id6942946_yuxin_db";
 	$conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 	if(! $conn ) {
 		die('Could not connect: ' . mysqli_error());

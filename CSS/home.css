@@ -1,0 +1,15 @@
+table#tb01{
+
+	border:5px dotted grey;
+	width:700px;
+}
+#h01{
+	margin-top: 3%;
+	color:#2f492e;
+}
+#d01{
+	margin-top: 5%;
+}
+.td01{
+	text-align: center;
+}

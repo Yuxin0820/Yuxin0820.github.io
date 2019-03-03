@@ -1,9 +1,9 @@
 <?php
 	session_start();
 	$dbhost = "localhost";
-		$dbuser = "root";
-		$dbpass = "";
-		$dbname = "final";
+	$dbuser = "id6942946_yuxin";
+	$dbpass = "082000";
+	$dbname = "id6942946_yuxin_db";
 	$conn = mysqli_connect($dbhost,$dbuser,$dbpass,$dbname);
 	if(! $conn ) {
 		die('Could not connect: ' . mysqli_error());
@@ -19,7 +19,7 @@
 	if( !empty($_POST['psw'])){
 					
 		$psw = ($_POST['psw']);
-		$sql = "UPDATE users SET password = '".$psw."' WHERE product.userID = ".$id;
+		$sql = "UPDATE Users SET password = '".$psw."' WHERE Users.userID = ".$id;
 		$result1 = mysqli_query($conn, $sql);
 	}
 	
@@ -70,7 +70,7 @@ if(!empty($_FILES["pic"])){
 	<div>
 	   <table id="t01" style="height:10%;">
 <?php 
-	$sql5 = "SELECT * FROM users WHERE users.userID = '" .$id."'";
+	$sql5 = "SELECT * FROM Users WHERE Users.userID = '" .$id."'";
 	$result = mysqli_query($conn, $sql5);
 if (mysqli_num_rows($result) > 0) {
 	while($row = mysqli_fetch_assoc($result)) {
